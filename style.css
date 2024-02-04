@@ -33,6 +33,7 @@ h1 {
   border-radius: 5px;
   border: 2px solid orangered;
   width: 15%;
+  font-size: 2rem;
 }
 
 .input-group input:focus {
