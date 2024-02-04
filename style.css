@@ -59,7 +59,7 @@ h1 {
 
 .container {
   display: flex;
-  width: 400px;
+  width: 800px;
   border: 4px solid orangered;
   margin: 2rem auto;
   flex-wrap: wrap;
