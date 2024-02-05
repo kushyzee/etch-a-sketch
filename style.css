@@ -36,7 +36,7 @@ h1 {
   gap: 1rem;
 }
 
-.input-group input {
+input {
   padding: 0.8rem 1rem;
   border-radius: 5px;
   border: 2px solid var(--accent-color);
@@ -46,12 +46,27 @@ h1 {
   color: white;
 }
 
-.input-group input:focus {
+.adjust-width {
+  margin-top: 2rem;
+}
+
+.adjust-width input {
+  width: 30%;
+  margin-left: 1rem;
+}
+
+.adjust-width button {
+  display: block;
+  margin-block: 1.5rem 2rem;
+  margin-inline: auto;
+}
+
+input:focus {
   border: 2.4px solid var(--hover-color);
   outline: none;
 }
 
-.input-group button {
+button {
   background-color: var(--accent-color);
   border: none;
   padding: 1rem 1.4rem;
@@ -62,7 +77,7 @@ h1 {
   transition: background-color 0.3s linear, color 0.3s linear;
 }
 
-.input-group button:hover {
+button:hover {
   background-color: var(--hover-color);
   color: whitesmoke;
 }
