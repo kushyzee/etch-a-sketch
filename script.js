@@ -26,12 +26,29 @@ function removePreviousGrid() {
 }
 
 function changeBoxColor(e) {
-  const colors = ['red', 'green', 'blue', 'purple', 'orange', 'lime', 'brown', 'cyan', 'darkblue', 'pink', 'skyblue', 'yellow']
+  const colorArray = [
+    "red",
+    "green",
+    "blue",
+    "purple",
+    "orange",
+    "lime",
+    "brown",
+    "cyan",
+    "darkblue",
+    "pink",
+    "skyblue",
+    "yellow",
+    "fucshia",
+    "hotpink",
+    "greenyellow",
+    "maroon",
+  ];
 
-  let randomColor = Math.round(Math.random() * 11)
-  let boxColor = e.target
+  let randomColor = Math.round(Math.random() * (colorArray.length - 1));
+  let boxColor = e.target;
   if (!boxColor.style.backgroundColor) {
-    boxColor.style.backgroundColor = colors[randomColor]
+    boxColor.style.backgroundColor = colorArray[randomColor];
   }
 }
 
