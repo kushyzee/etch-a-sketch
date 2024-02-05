@@ -29,7 +29,7 @@ h1 {
 }
 
 .input-group {
-  margin-block: 2rem;
+  margin-block: 2rem .8rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -47,7 +47,7 @@ input {
 }
 
 .adjust-width {
-  margin-top: 2rem;
+  margin-top: 3rem;
 }
 
 .adjust-width input {
