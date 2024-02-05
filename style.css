@@ -60,7 +60,8 @@ h1 {
 .container {
   display: flex;
   width: 800px;
-  border: 4px solid orangered;
+  border: 8px solid orangered;
+  border-radius: 10px;
   margin: 2rem auto;
   flex-wrap: wrap;
 }
