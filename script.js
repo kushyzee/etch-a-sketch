@@ -3,11 +3,19 @@ const columnNumber = document.querySelector("#column-number");
 const enterBtn = document.querySelector("button");
 const gridContainer = document.querySelector(".container");
 
-rowNumber.value = 16
+rowNumber.value = 4
 columnNumber.textContent = rowNumber.value;
 
+function formatInput () {
+  rowNumber.value = Math.floor(rowNumber.value)
+  columnNumber.textContent = rowNumber.value
+  if(rowNumber.value === 0) console.log('NaN')
+}
+
 function removePreviousGrid () {
-  console.log(gridContainer)
+  Array.from(gridContainer.children).forEach(box => box.remove())
+  columnNumber.textContent = rowNumber.value
+  createGrid()
 }
 
 function createGrid() {
@@ -22,4 +30,6 @@ function createGrid() {
 }
 
 createGrid()
+
 enterBtn.addEventListener('click', removePreviousGrid)
+rowNumber.addEventListener('input', formatInput)
