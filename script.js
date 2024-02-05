@@ -28,8 +28,11 @@ function removePreviousGrid() {
 function changeBoxColor(e) {
   const colors = ['red', 'green', 'blue', 'purple', 'orange', 'lime', 'brown', 'cyan', 'darkblue', 'pink', 'skyblue', 'yellow']
 
-  randomColor = Math.round(Math.random() * 11)
-  e.target.style.backgroundColor = colors[randomColor]
+  let randomColor = Math.round(Math.random() * 11)
+  let boxColor = e.target
+  if (!boxColor.style.backgroundColor) {
+    boxColor.style.backgroundColor = colors[randomColor]
+  }
 }
 
 function createGrid() {
