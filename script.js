@@ -4,7 +4,7 @@ const enterBtn = document.querySelector("button");
 const gridContainer = document.querySelector(".container");
 
 function setRowAndCol() {
-  rowNumber.value = 4;
+  rowNumber.value = 16;
   columnNumber.textContent = rowNumber.value;
 }
 
@@ -26,7 +26,10 @@ function removePreviousGrid() {
 }
 
 function changeBoxColor(e) {
-  e.target.style.backgroundColor = 'orangeRed'
+  const colors = ['red', 'green', 'blue', 'purple', 'orange', 'lime', 'brown', 'cyan', 'darkblue', 'pink', 'skyblue', 'yellow']
+
+  randomColor = Math.round(Math.random() * 11)
+  e.target.style.backgroundColor = colors[randomColor]
 }
 
 function createGrid() {
