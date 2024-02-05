@@ -16,13 +16,17 @@ function formatInput() {
 function removePreviousGrid() {
   if (rowNumber.value < 1) {
     alert("Please enter a number between 1 and 100");
-    setRowAndCol()
-    return
+    setRowAndCol();
+    return;
   }
 
   Array.from(gridContainer.children).forEach((box) => box.remove());
   columnNumber.textContent = rowNumber.value;
   createGrid();
+}
+
+function changeBoxColor(e) {
+  e.target.style.backgroundColor = 'orangeRed'
 }
 
 function createGrid() {
@@ -33,10 +37,11 @@ function createGrid() {
     let newBox = document.createElement("div");
     newBox.style.cssText = `flex-basis: ${flexBasis}px`;
     gridContainer.appendChild(newBox);
+    newBox.addEventListener("mouseover", changeBoxColor);
   }
 }
 
-setRowAndCol()
+setRowAndCol();
 createGrid();
 
 enterBtn.addEventListener("click", removePreviousGrid);
